@@ -39,7 +39,7 @@ _run() {
     # Set up the working directory
     local results
     if [ "$_dir" ]; then
-        results="$_dir/$(date '+%Y/%m/%d/%T')"
+        results="$_dir/$(date '+%Y/%m/%d/%H.%M.%S')"
         if [ -e "$results" ]; then
             _die $EX_CANTCREAT '"%s" already exists' "$results"
         fi
